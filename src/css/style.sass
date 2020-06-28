@@ -1,0 +1,562 @@
+//normalize
+
+html
+  line-height: 1.15
+  -webkit-text-size-adjust: 100%
+
+body
+  margin: 0
+
+p
+  margin-block-start: 0
+  margin-block-end: 0
+main
+  display: block
+
+h1
+  font-size: 2em
+  margin: 0.67em 0
+
+hr
+  box-sizing: content-box
+  height: 0
+  overflow: visible
+
+pre
+  font-family: monospace, monospace
+  font-size: 1em
+
+a
+  background-color: transparent
+
+abbr[title]
+  border-bottom: none
+  text-decoration: underline
+
+b, strong
+  font-weight: bolder
+
+code, kbd, samp
+  font-family: monospace, monospace
+  font-size: 1em
+
+small
+  font-size: 80%
+
+sub, sup
+  font-size: 75%
+  line-height: 0
+  position: relative
+  vertical-align: baseline
+
+sub
+  bottom: -0.25em
+
+sup
+  top: -0.5em
+
+img
+  border-style: none
+
+button, input, optgroup, select, textarea
+  font-family: inherit
+  font-size: 100%
+  line-height: 1.15
+  margin: 0
+
+button, input
+  overflow: visible
+
+button, select
+  text-transform: none
+
+button, [type="button"], [type="reset"], [type="submit"]
+  -webkit-appearance: button
+
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner
+  border-style: none
+  padding: 0
+
+button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring
+  outline: 1px dotted ButtonText
+
+fieldset
+  padding: 0.35em 0.75em 0.625em
+
+legend
+  box-sizing: border-box
+  color: inherit
+  display: table
+  max-width: 100%
+  padding: 0
+  white-space: normal
+
+progress
+  vertical-align: baseline
+
+textarea
+  overflow: auto
+
+[type="checkbox"], [type="radio"]
+  box-sizing: border-box
+  padding: 0
+
+[type="number"]
+  &::-webkit-inner-spin-button, &::-webkit-outer-spin-button
+    height: auto
+
+[type="search"]
+  -webkit-appearance: textfield
+  outline-offset: -2px
+
+  &::-webkit-search-decoration
+    -webkit-appearance: none
+
+::-webkit-file-upload-button
+  -webkit-appearance: button
+  font: inherit
+
+details
+  display: block
+
+summary
+  display: list-item
+
+template, [hidden]
+  display: none
+
+//app-styles
+
+section
+  min-width: 360px
+
+.section-about
+  background: url(/img/lake.jpg) 0 0/cover
+
+.section-story
+
+.section-video
+  background: url(/img/win.jpg) 0 0/cover
+
+.section-expertise
+
+.section-team
+  background: url(/img/man.jpg) 0 0/cover
+
+.section-works
+
+.section-people
+  background: url(/img/sad.jpg) 0 0/cover
+
+.section-info
+
+.section-contact
+  background: url(/img/fon.jpg) 0 0/cover
+
+// section: About us
+
+$WhiteColor: #fff
+$BlueColor: #00e0d0
+$GreyColor: #413d4b
+
+=StylesForButtons()
+  margin-bottom: 207px
+  padding: 15px
+  font-size: 16px
+  line-height: 1em
+  color: $BlueColor
+  display: inline-block
+  cursor: pointer
+  font-weight: bold
+  -webkit-border-radius: 3px
+  -moz-border-radius: 3px
+  border-radius: 3px
+  font-family: 'Roboto', sans-serif
+  background-color: rgba(0, 0, 0, 0)
+  border: 1px solid $BlueColor
+  text-decoration: none
+  &:hover
+    background-color: $BlueColor
+    color: $WhiteColor
+
+=MaxAndMinRestriction()
+  max-width: 1170px
+  margin: 0 auto
+  @media screen and (max-width: 1229px)
+    &
+      padding-left: 5%
+      padding-right: 5%
+
+ul
+  padding-left: 0
+  display: inline
+  justify-content: flex-end
+li
+  font-family: Roboto,sans-serif
+  color: $WhiteColor
+  margin-left: 20px
+  font-size: 13px
+  font-weight: bolder
+  display: inline
+  cursor: pointer
+  a
+    text-decoration: none
+    color: $WhiteColor
+  a:hover
+    cursor: pointer
+    color: $BlueColor
+nav
+  display: inline
+
+.navigation-content-wrapper
+  +MaxAndMinRestriction
+
+.navigation-content
+  position: relative
+  height: 90px
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+@media (max-width: 768px)
+ ul
+   display: none
+ .burger-content
+   display: block
+
+.active
+  position: absolute
+  right: 25px
+  top: 15px
+  display: block
+  li
+    margin-top: 5px
+    display: block
+
+@media (min-width: 768px)
+  .burger-content-wrapper
+    display: none
+  .burger-content
+    display: none
+  .active
+    display: inline
+    li
+      margin-top: 0
+      display: inline
+
+.burger-content-wrapper
+  height: 16px
+  width: 21px
+  cursor: pointer
+
+.burger-content
+  border-radius: 50px
+  top: 43px
+  background-color: $WhiteColor
+  height: 2px
+  width: 20px
+  position: absolute
+  &::after,&::before
+    border-radius: 50px
+    top: -5px
+    content: ''
+    background-color: $WhiteColor
+    height: 2px
+    width: 20px
+    position: absolute
+  &::before
+    top: 5px
+
+.navigation-text-content
+  text-align: center
+  h1
+    margin: 137px 0 0 0
+    font-family: '', serif
+    font-size: 42px
+    font-weight: bolder
+    color: $WhiteColor
+    width: 100%
+    line-height: 1.1
+  hr
+    width: 50px
+    height: 1px
+    border: none
+    margin-top: 40px
+    margin-bottom: 30px
+    background-color: $BlueColor
+    opacity: 1.0
+  p
+    margin: 0 0 50px
+    font-family: Roboto,sans-serif
+    font-size: 18.6px
+    word-spacing: 3px
+    line-height: 1.8
+    color: $WhiteColor
+    width: 100%
+  button
+    +StylesForButtons
+
+// section: Our-story
+
+.our-story-content-wrapper
+  +MaxAndMinRestriction
+
+.our-story-content
+  display: flex
+  align-items: end
+  margin-top: 70px
+  margin-bottom: 70px
+  img
+    margin-left: 150px
+
+.our-story-text-info
+  margin-left: 100px
+  h1
+    font-family: '', serif
+    font-size: 29.2px
+    text-align: left
+    color: $GreyColor
+    font-weight: bolder
+    margin: 0 0 30px 0
+  p
+    font-family: Roboto,sans-serif
+    font-size: 18.6px
+    font-weight: lighter
+    text-align: left
+    color: $GreyColor
+    opacity: .75
+    line-height: 1.4
+  p ~ p
+    margin-top: 25px
+    margin-bottom: 40px
+  button
+    +StylesForButtons
+    margin-bottom: 0
+
+@media screen and (max-width: 1229px)
+  .our-story-content
+    img
+      margin-left: 0
+
+@media screen and (max-width: 768px)
+  .our-story-content
+    flex-wrap: wrap
+    justify-content: center
+  .our-story-text-info
+    text-align: center
+    margin-top: 50px
+    margin-left: 0
+
+
+// section: Watch our story
+
+.video-content-wrapper
+  +MaxAndMinRestriction
+
+.video-content
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  h1
+    color: $WhiteColor
+    font-family: Roboto,sans-serif
+    font-size: 22px
+    margin-top: 20px
+    font-weight: bolder
+    margin-bottom: 200px
+  a
+    margin-top: 200px
+    border: 0 solid #ccc
+    padding: 8px 20px
+    background: rgba(0,0,0,0)
+    cursor: pointer
+    transition: 0.3s
+  a:hover
+    transform: scale(1.2)
+    img
+      background: rgba(0,0,0,0)
+      border: 0 solid #ccc
+
+//Section: Expertise
+
+.expertise-content-info-block
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  align-items: center
+
+.expertise-content-wrapper
+  +MaxAndMinRestriction
+
+.expertise-content
+  img
+    height: 50px
+  h2
+    font-family: '',sans-serif
+    font-size: 16px
+    text-align: center
+    margin-top: 30px
+    font-weight: bolder
+    color: $GreyColor
+    width: 100%
+  h1
+    font-family: '', serif
+    font-size: 29.2px
+    margin-top: 70px
+    text-align: center
+    color: $GreyColor
+    font-weight: bolder
+    line-height: 1.1
+  p
+    margin-top: 17.2px
+    font-family: 'Playfair Display',serif
+    font-size: 18.6px
+    text-align: center
+    color: #2f2d35
+    opacity: .75
+  hr
+    width: 50px
+    border: none
+    height: 2px
+    margin-top: 26px
+    margin-bottom: 84px
+    background: $GreyColor
+    opacity: .3
+
+.info-block
+  text-align: center
+  width: 390px
+  p
+    font-family: Roboto,sans-serif
+    font-size: 18.6px
+    text-align: center
+    margin-top: 24px
+    color: $GreyColor
+    opacity: .75
+    word-spacing: 2px
+    line-height: 1.5
+    width: 100%
+    margin-bottom: 70px
+
+// Section: Team
+
+.team-content-mempers
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+
+.team-content-wrapper
+  +MaxAndMinRestriction
+
+.team-content
+  text-align: center
+  hr
+    background: $WhiteColor
+    height: 2px
+    opacity: 0.2
+    margin-top: 20px
+    margin-bottom: 50px
+    border: none
+    width: 50px
+
+  h1
+    font-family: '', serif
+    text-align: center
+    position: relative
+    color: $WhiteColor
+    font-size: 29.2px
+    font-weight: bolder
+    line-height: 1.1
+    margin-top: 70px
+    display: inline-block
+    margin-bottom: 0
+  p
+    font-family: 'Playfair Display',serif
+    font-size: 18.6px
+    text-align: center
+    margin: 10px 0 0
+    color: #f9f9f9
+  button
+    +StylesForButtons
+    margin-bottom: 70px
+    margin-top: 30px
+
+.team-content-mempers+p
+  margin-top: 70px
+  font-family: Roboto,sans-serif
+  font-size: 17.2px
+  color: #f3f3f3
+
+.team-member
+  height: 383px
+  width: 270px
+  border: 1px solid #e7e7e782
+  img
+    width: 100%
+  p
+    font-family: Roboto,sans-serif
+    font-size: 18.6px
+    margin: 20px 50px 0
+    font-weight: bolder
+  p+p
+    font-size: 17.2px
+    font-weight: lighter
+    margin: 15px 0 20px
+    opacity: .7
+
+@media (max-width: 768px)
+  .team-member
+    height: auto
+    width: 100%
+
+@media (max-width: 1229px)
+  .team-content-mempers
+    justify-content: space-around
+  .team-member
+    margin-bottom: 30px
+    &:last-child
+      margin-bottom: 0
+
+//Section: Popup
+
+.popup
+  transition: 0.2s
+  position: fixed
+  width: 100%
+  height: 100%
+  background-color: rgba(0,0,0,0.8)
+  top: 0
+  left: 0
+  opacity: 0
+  visibility: hidden
+  overflow-y: hidden
+  overflow-x: auto
+
+.popup:target
+  opacity: 1
+  visibility: visible
+
+.popup-content-wrapper
+  min-height: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+
+.popup-content
+  position: absolute
+  height: 50%
+  width: 50%
+  min-width: 320px
+
+.popup-area
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+
+.invisible-header
+  opacity: 0
+  visibility: hidden
+  position: fixed

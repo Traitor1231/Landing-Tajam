@@ -1,0 +1,116 @@
+doctype html
+html
+    head
+        title Tajam
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(rel='stylesheet', href='css/style.min.css')
+        link(href='https://fonts.googleapis.com/css?family=Playfair+Display&display=swap', rel='stylesheet')
+        link(href='https://fonts.googleapis.com/css?family=Roboto&display=swap', rel='stylesheet')
+    body
+        main
+            section#company-info.section-about
+                .navigation-content-wrapper
+                    header.navigation-content
+                        img(src='img/logo.png', alt='logo-img')
+                        nav
+                            #burger.burger-content-wrapper
+                                span.burger-content
+                            ul#navigation-content
+                                li
+                                    a(href="#company-info") HOME
+                                li
+                                    a(href="#our-story") ABOUT
+                                li
+                                    a(href="#expertise") EXPERTISE
+                                li
+                                    a(href="#team") TEAMS
+                                li
+                                    a(href="#works") WORKS
+                                li
+                                    a(href="#people-say") PEOPLE SAY
+                                li
+                                    a(href="#contact") CONTACT
+                    .navigation-text-content
+                        h1
+                            | We Are Awesome Creative Agency
+                        hr
+                        p
+                            | This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+                            | sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis
+                            | sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.This is
+                            | Photoshop's version of Lorem Ipsum velit.
+                        button
+                            | LEARN MORE
+            section#our-story.section-story
+                .our-story-content-wrapper
+                    .our-story-content
+                        img(src='img/big-logo.png', alt='big-logo-img')
+                        .our-story-text-info
+                            h1 OUR STORY
+                            p
+                                | This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+                                | sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+                                | Duis
+                                | sed
+                                | odio sit amet nibh vulputate cursus.
+                            p
+                                | Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris
+                                | vitae
+                                | erat
+                                | consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                                | inceptos himenaeos.
+                            button
+                                | LEARN MORE
+            section#video.section-video
+                .video-content-wrapper
+                    .video-content
+                        a(href='#popup')
+                            img(src='img/play.png', height='100', alt='our-story-video-img')
+                        h1 WATCH OUR STORY
+            section#expertise.section-expertise
+                .expertise-content-wrapper
+                    .expertise-content
+                        h1 EXPERTISE
+                        p Lerem ipsum dolor sit amet proin gravida nibh vel velit
+                        hr
+                        .expertise-content-info-block
+                            mixin info-block(imgAdress,title,text,altText)
+                                .info-block
+                                    img(src=imgAdress, alt=altText)
+                                    h2= title
+                                    p= text
+                            +info-block("img/comp.png","WEB DESIGN","This is Photoshop version of Lorem ipsum.Proin gravida nibh vel velit auctor aliquet Aenean","PC-img")
+                            +info-block("img/kis.png","BRANDING IDENTITY","This is Photoshop version of Lorem ipsum.Proin gravida nibh vel velit auctor aliquet Aenean","paint-img")
+                            +info-block("img/phone.png","MOBILE APP","This is Photoshop version of Lorem ipsum.Proin gravida nibh vel velit auctor aliquet Aenean","phone-img")
+                            +info-block("img/stat.png","SEARCH ENGINE OPTIMIZATION","This is Photoshop version of Lorem ipsum.Proin gravida nibh vel velit auctor aliquet Aenean","statistic-img")
+                            +info-block("img/game.png","GAME DEVELOPMENT","This is Photoshop version of Lorem ipsum.Proin gravida nibh vel velit auctor aliquet Aenean","video-game-img")
+                            +info-block("img/love.png","MADE WITH LOVE","This is Photoshop version of Lorem ipsum.Proin gravida nibh vel velit auctor aliquet Aenean","love-img")
+            section#team.section-team
+                .team-content-wrapper
+                    .team-content
+                         h1 MEET OUR AMAZING TEAM
+                         p Lerem ipsum dolor sit amet proin gravida nibh vel velit
+                         hr
+                         .team-content-mempers
+                             mixin team-members(imgAdress,name,position,altText)
+                                 .team-member
+                                     img(src=imgAdress, alt=altText)
+                                     p= name
+                                     p= position
+                             +team-members("img/m2.jpg","SEMF UCUK","CEO&FONDLER","company-member")
+                             +team-members("img/m2.jpg","DIK ADALIN","EENGINEERING","company-member")
+                             +team-members("img/m2.jpg","JENG KOLL","DESIGNER","company-member")
+                             +team-members("img/m2.jpg","PET ROMAK","MARKETING","company-member")
+                         p Become part of our dream team,let's join us!
+                         button WE ARE HIRING
+            section#works.section-works works
+            section#people-say.section-people people
+            section#feedback.section-info info
+            section#contact.section-contact contact
+            section#popup.popup
+                a.popup-area(href='#invisible-header')#area-popup
+                #invisible-header.invisible-header
+                .popup-content-wrapper
+                    iframe(frameborder='0',src='https://www.youtube.com/embed/KvUgaHTNit4').popup-content#iframe-popup
+        script(src='js/main.js')
