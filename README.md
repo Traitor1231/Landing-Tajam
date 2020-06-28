@@ -9,7 +9,7 @@ Responsinator:https://www.responsinator.com/?url=https%3A%2F%2Fnutnetgulp.heroku
 ## Local installation
 
 ```
-$ git clone https://github.com/Traitor1231/Tajam
+$ git clone https://github.com/Traitor1231/Landing-Tajam
 $ cd tajam-gulp
 $ npm install
 ```
