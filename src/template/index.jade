@@ -11,8 +11,9 @@ html
         main
             section#company-info.section-about
                 .navigation-content-wrapper
-                    header.navigation-content
-                        img(src='img/logo.png', alt='logo-img')
+                    .navigation-content
+                        a(href="#company-info")
+                            img(src='img/logo.png', alt='logo-img')
                         nav
                             #burger.burger-content-wrapper
                                 span.burger-content
@@ -104,9 +105,29 @@ html
                              +team-members("img/m2.jpg","PET ROMAK","MARKETING","company-member")
                          p Become part of our dream team,let's join us!
                          button WE ARE HIRING
-            section#works.section-works works
+            section#works.section-works
+                .works-content-wrapper
+                    .works-content
+                        .works-top-content
+                            h1 OUR WORKS
+                            a(href="#") See all project in dribble
+                                img(src="/img/arrow.png" alt="arrow-img")
+                        .works-examples
+                            - let CountOfImages = ["1", "2", "3", "4", "5", "6","7", "8", "9", "10", "11", "12"];
+                                for ImgRef in CountOfImages
+                                    img(src="img/#{ImgRef}.jpg")
+                        .works-bottom-content
+                            button LOAD MORE
             section#people-say.section-people people
-            section#feedback.section-info info
+            section#feedback.section-info
+                .info-content-wrapper
+                    .info-content
+                        h1 GIVE US A GOOD NEWS
+                        input(placeholder="Name")
+                        input(placeholder="E-Mail")
+                        input(placeholder="Subject")
+                        textarea
+                        button SUBMIT
             section#contact.section-contact contact
             section#popup.popup
                 a.popup-area(href='#invisible-header')#area-popup
