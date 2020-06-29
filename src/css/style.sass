@@ -1,4 +1,6 @@
 //normalize
+*
+  box-sizing: border-box
 
 html
   line-height: 1.15
@@ -160,6 +162,7 @@ $BlueColor: #00e0d0
 $GreyColor: #413d4b
 
 =StylesForButtons()
+  outline: none
   padding: 15px
   font-size: 16px
   line-height: 1em
@@ -526,14 +529,6 @@ nav
     width: 100%
     flex-basis: 16.66%
 
-@media(max-width: 768px)
-  .works-top-content
-    flex-direction: column
-  .works-examples
-    img
-      flex-basis: 100%
-      padding: 0 5%
-
 .works-bottom-content
   text-align: center
   button
@@ -570,6 +565,15 @@ nav
   a:hover
     color: $BlueColor
 
+@media(max-width: 768px)
+  .works-content-wrapper
+    padding: 0 5%
+  .works-top-content
+    flex-direction: column
+  .works-examples
+    img
+      flex-basis: 100%
+
 //Section:People say
 
 //Section: Info
@@ -580,23 +584,54 @@ nav
 
 .info-content
   text-align: center
+  display: flex
+  align-items: center
+  flex-direction: column
   h1
     font-family: '',serif
     font-size: 29.2px
     color: $GreyColor
     font-weight: bolder
-    margin-bottom: 50px
+    margin-bottom: 34px
   input,textarea
+    outline: none
     width: 100%
     max-width: 460px
-    height: 45px
-    font-family: Roboto
+    font-family: Roboto,serif
     font-size: 14px
     border: 1px solid rgba(0,0,0,.1)
-    padding: 13px 4% 13px 2%
+    padding: 13px 10px
+    margin-bottom: 23px
+    color: rgba(65,61,75,.5)
+  input::-ms-clear
+    display: none
+  input::placeholder
+    opacity: 1
+    color: rgba(65,61,75,.5)
+  input::-ms-input-placeholder
+    color: rgba(65,61,75,.5)
+  input::-ms-input-placeholder
+    color: rgba(65,61,75,.5)
+  textarea
+    color: rgba(65,61,75,.5)
+    resize: none
+    height: 200px
+  textarea::-ms-clear
+    display: none
+  textarea::placeholder
+    opacity: 1
+    color: rgba(65,61,75,.5)
+  textarea::-ms-input-placeholder
+    color: rgba(65,61,75,.5)
+  textarea::-ms-input-placeholder
+    color: rgba(65,61,75,.5)
   button
     +StylesForButtons
 
+@media (max-width: 768px)
+  .info-content
+    input,textarea
+      width: 80%
 
 //Section: Popup
 
