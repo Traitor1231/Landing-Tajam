@@ -33,36 +33,33 @@ html
                                 li
                                     a(href="#contact") CONTACT
                     .navigation-text-content
-                        h1
-                            | We Are Awesome Creative Agency
+                        h1 We Are Awesome Creative Agency
                         hr
-                        p
-                            | This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
-                            | sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis
-                            | sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.This is
-                            | Photoshop's version of Lorem Ipsum velit.
-                        button
-                            | LEARN MORE
+                        p.
+                            This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+                            sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis
+                            sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.This is
+                            Photoshop's version of Lorem Ipsum velit.
+                        button LEARN MORE
             section#our-story.section-story
                 .our-story-content-wrapper
                     .our-story-content
                         img(src='img/big-logo.png', alt='big-logo-img')
                         .our-story-text-info
                             h1 OUR STORY
-                            p
-                                | This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
-                                | sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
-                                | Duis
-                                | sed
-                                | odio sit amet nibh vulputate cursus.
-                            p
-                                | Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris
-                                | vitae
-                                | erat
-                                | consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-                                | inceptos himenaeos.
-                            button
-                                | LEARN MORE
+                            p.
+                                This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+                                sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+                                Duis
+                                sed
+                                odio sit amet nibh vulputate cursus.
+                            p.
+                                Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris
+                                vitae
+                                erat
+                                consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                                inceptos himenaeos.
+                            button LEARN MORE
             section#video.section-video
                 .video-content-wrapper
                     .video-content
@@ -90,21 +87,21 @@ html
             section#team.section-team
                 .team-content-wrapper
                     .team-content
-                         h1 MEET OUR AMAZING TEAM
-                         p Lerem ipsum dolor sit amet proin gravida nibh vel velit
-                         hr
-                         .team-content-mempers
-                             mixin team-members(imgAdress,name,position,altText)
-                                 .team-member
-                                     img(src=imgAdress, alt=altText)
-                                     p= name
-                                     p= position
-                             +team-members("img/m2.jpg","SEMF UCUK","CEO&FONDLER","company-member")
-                             +team-members("img/m2.jpg","DIK ADALIN","EENGINEERING","company-member")
-                             +team-members("img/m2.jpg","JENG KOLL","DESIGNER","company-member")
-                             +team-members("img/m2.jpg","PET ROMAK","MARKETING","company-member")
-                         p Become part of our dream team,let's join us!
-                         button WE ARE HIRING
+                        h1 MEET OUR AMAZING TEAM
+                        p Lerem ipsum dolor sit amet proin gravida nibh vel velit
+                        hr
+                        .team-content-mempers
+                            mixin team-members(imgAdress,name,position,altText)
+                                .team-member
+                                    img(src=imgAdress, alt=altText)
+                                    p= name
+                                    p= position
+                            +team-members("img/m2.jpg","SEMF UCUK","CEO&FONDLER","company-member")
+                            +team-members("img/m2.jpg","DIK ADALIN","EENGINEERING","company-member")
+                            +team-members("img/m2.jpg","JENG KOLL","DESIGNER","company-member")
+                            +team-members("img/m2.jpg","PET ROMAK","MARKETING","company-member")
+                        p Become part of our dream team,let's join us!
+                        button WE ARE HIRING
             section#works.section-works
                 .works-content-wrapper
                     .works-content
@@ -123,12 +120,59 @@ html
                 .info-content-wrapper
                     .info-content
                         h1 GIVE US A GOOD NEWS
-                        input(placeholder="Name")
-                        input(placeholder="E-Mail")
-                        input(placeholder="Subject")
-                        textarea(placeholder="Your message")
-                        button SUBMIT
-            section#contact.section-contact contact
+                        form
+                            input(placeholder="Name", type="text", required)
+                            input(placeholder="E-Mail", type="email", required)
+                            input(placeholder="Subject", type="text", required)
+                            textarea(placeholder="Your message", type="text", required)
+                            button(type="submit") SUBMIT
+            section#contact.section-contact
+                .contact-content-wrapper
+                    .contact-content
+                        .contact-content-info
+                            .contact-content-tajam-info
+                                img(src="img/lil-logo.png", alt="footer-logo-img")
+                                p.
+                                    lorem quis bibendum auctor, nisi elit consequat ipsum,
+                                    nec sagittis sem nibh elit. Duis sed odio sit amet auctror
+                                    a ornare odio non mauris vitae erat in elit
+                            .contact-content-our-studio
+                                h2 OUR STUDIO
+                                .contact-content-our-studio-adress
+                                    img(src="img/big.png", alt="footer-adress-logo-img")
+                                    address Ruko cucruk, Jl. Radio luar dalem jos No.12 - 13, Kalideres - Jakarta Barat 11480 - Indonesia
+                                .contact-content-our-studio-phone
+                                    img(src="img/phone-footer.png", alt="footer-adress-logo-img")
+                                    p (+62) 21-2244 3333
+                            .contact-content-stay-in-touch
+                                h2 STAY IN TOUCH
+                                .contact-content-stay-in-touch-subscribe-form
+                                    form
+                                        input(placeholder="Subscribe our newsletter", required)
+                                        button(type="submit")
+                                            img(src="img/papper.png" alt="subscribe-button-img")
+                                ul
+                                    li
+                                        a 1
+                                    li
+                                        a 2
+                                    li
+                                        a 3
+                                    li
+                                        a 4
+                                    li
+                                        a 5
+                                    li
+                                        a 6
+                        .contact-content-bottom
+                            ul
+                                li
+                                    a(href="#") HELP
+                                li
+                                    a(href="#") TERM & CONDITIONS
+                                li
+                                    a(href="#") PRIVACY
+                            p Copyright © 2015 - Tajem Creative
             section#popup.popup
                 a.popup-area(href='#invisible-header')#area-popup
                 #invisible-header.invisible-header
