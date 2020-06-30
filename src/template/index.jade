@@ -93,7 +93,7 @@ html
                         p Lerem ipsum dolor sit amet proin gravida nibh vel velit
                         hr
                         .team-content-mempers
-                            mixin team-members(imgAdress,name,position,altText)
+                            mixin team-members(imgAdress,position,altText)
                                 .team-member
                                     img(src=imgAdress, alt=altText)
                                     p= name
@@ -126,7 +126,7 @@ html
                             input(placeholder="Name", type="text", required)
                             input(placeholder="E-Mail", type="email", required)
                             input(placeholder="Subject", type="text", required)
-                            textarea(placeholder="Your message", type="text", required)
+                            textarea(placeholder="Your message", required)
                             button(type="submit") SUBMIT
             section#contact.section-contact
                 .contact-content-wrapper
@@ -183,9 +183,9 @@ html
                                 li
                                     a(href="#") PRIVACY
                             p Copyright © 2015 - Tajem Creative
-            section#popup.popup
+            #popup.popup
                 a.popup-area(href='#invisible-header')#area-popup
                 #invisible-header.invisible-header
                 .popup-content-wrapper
-                    iframe(frameborder='0',src='https://www.youtube.com/embed/KvUgaHTNit4').popup-content#iframe-popup
+                    iframe(frameborder='0', src='https://www.youtube.com/embed/KvUgaHTNit4').popup-content#iframe-popup
         script(src='js/main.js')
