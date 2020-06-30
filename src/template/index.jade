@@ -1,5 +1,5 @@
 doctype html
-html
+html(lang="en")
     head
         title Tajam
         meta(charset='utf-8')
@@ -93,7 +93,7 @@ html
                         p Lerem ipsum dolor sit amet proin gravida nibh vel velit
                         hr
                         .team-content-mempers
-                            mixin team-members(imgAdress,position,altText)
+                            mixin team-members(imgAdress,name,position,altText)
                                 .team-member
                                     img(src=imgAdress, alt=altText)
                                     p= name
@@ -114,7 +114,7 @@ html
                         .works-examples
                             - let CountOfImages = ["1", "2", "3", "4", "5", "6","7", "8", "9", "10", "11", "12"];
                                 for ImgRef in CountOfImages
-                                    img(src="img/#{ImgRef}.jpg")
+                                    img(src="img/#{ImgRef}.jpg", alt="work-example-img")
                         .works-bottom-content
                             button LOAD MORE
             section#people-say.section-people people
@@ -187,5 +187,5 @@ html
                 a.popup-area(href='#invisible-header')#area-popup
                 #invisible-header.invisible-header
                 .popup-content-wrapper
-                    iframe(frameborder='0', src='https://www.youtube.com/embed/KvUgaHTNit4').popup-content#iframe-popup
+                    iframe(src='https://www.youtube.com/embed/KvUgaHTNit4').popup-content#iframe-popup
         script(src='js/main.js')
