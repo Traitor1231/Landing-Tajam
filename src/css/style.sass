@@ -12,6 +12,9 @@ body
 p
   margin-block-start: 0
   margin-block-end: 0
+  margin-bottom: 0
+  margin-top: 0
+
 main
   display: block
 
@@ -180,7 +183,7 @@ $White-GrayColorForFeedbackForm: rgba(65,61,75,.5)
   -moz-border-radius: 3px
   border-radius: 3px
   font-family: 'Roboto', sans-serif
-  background-color: #ccc0
+  background-color: rgba(0,0,0,0)
   border: 1px solid $BlueColor
   text-decoration: none
   &:hover
@@ -228,10 +231,11 @@ nav
   align-items: center
 
 @media (max-width: 768px)
- ul
-   display: none
- .burger-content
-   display: block
+  nav
+    ul
+      display: none
+  .burger-content
+    display: block
 
 .active
   position: absolute
@@ -660,6 +664,9 @@ nav
 .contact-content-our-studio-adress
   height: 125px
 
+.contact-content-stay-in-touch-subscribe-form
+  margin-bottom: 35px
+
 .contact-content-our-studio-phone,.contact-content-our-studio-adress
   p,address
     position: relative
@@ -667,9 +674,35 @@ nav
     bottom: 35px
     max-width: 95%
 
+.contact-content-stay-in-touch-social-network-refs
+  ul
+    li
+      margin-left: 0
+      a
+        i
+          margin-right: 5px
+          margin-bottom: 10px
+          border: 1px solid $WhiteColor
+          border-radius: 25px
+          height: 38px
+          width: 38px
+          padding: 12px 12px
+        i.fa-facebook
+          padding: 12px 15px
+        i.fa-google-plus
+          padding: 12px 10px
+        i.fa-dribbble
+          padding: 12px 13px
+
+
+
 .contact-content-stay-in-touch
+  margin-left: 15px
   form
     display: flex
+    justify-content: center
+    img
+      margin-top: 5px
     button
       background-color: $WhiteColor
       border: none
@@ -721,11 +754,29 @@ nav
   a:hover
     color: $BlueColor
 
+@media (max-width: 1229px)
+  .contact-content-bottom
+    ul
+      li
+        a
+          margin-right: 25px
+  .contact-content-our-studio-adress
+    address
+      line-height: 1.75
+
 @media (max-width: 768px)
+  .contact-content-our-studio-adress
+    margin-bottom: 15px
+  .contact-content-stay-in-touch
+    margin-left: 0
+  .contact-content-info
+    h2
+      margin: 0 0 15px
   .contact-content-info > div
     margin-bottom: 25px
   .contact-content-our-studio-adress,.contact-content-our-studio-phone
     address,p
+      line-height: 1.9
       position: static
       max-width: 100%
   .contact-content-info

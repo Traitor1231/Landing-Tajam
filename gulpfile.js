@@ -25,8 +25,8 @@ const styleFiles = [
 ]
 
 const scriptFiles = [
-    './src/js/video-menu.js',
-    './src/js/nav-panel.js'
+    './src/js/ReloadAtributeRefAtIframeVideo.js',
+    './src/js/ChangeAdaptiveMenuClassList.js'
 ]
 
 
