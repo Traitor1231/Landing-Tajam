@@ -336,12 +336,12 @@ nav
   button
     +StylesForButtons
 
-@media screen and (max-width: 1229px)
+@media(max-width: 1229px)
   .our-story-content
     img
       margin-left: 0
 
-@media screen and (max-width: 768px)
+@media(max-width: 768px)
   .our-story-content
     flex-wrap: wrap
     justify-content: center
@@ -350,6 +350,8 @@ nav
     margin-top: 50px
     margin-left: 0
     h1
+      text-align: center
+    p
       text-align: center
 
 
@@ -580,7 +582,79 @@ nav
     img
       flex-basis: 100%
 
-//Section:People say
+//Section: People say
+
+.people-say-content-wrapper
+  +MaxAndMinRestriction
+  padding: 70px 0
+
+.slick-track
+  display: flex
+  text-align: center
+
+.slider   
+  overflow: hidden
+
+.slick-dots
+  display: flex
+  justify-content: center
+  align-items: center
+  margin: 0
+  li
+    button
+      font-size: 0
+      background: url(#) no-repeat
+      width: 45px
+      height: 45px
+      border-radius: 50%
+      cursor: pointer
+      outline: none
+
+li.slick-active
+  button
+    height: 70px
+    width: 70px
+
+.slick-dots
+  display: flex
+  justify-content: center
+  li
+    margin-left: 10px
+  li:first-child
+    margin-left: 0
+
+
+.slider__item
+  cursor: pointer
+  outline: none
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  display: flex
+  p
+    color: $WhiteColor
+    word-spacing: 3px
+    line-height: 1.8
+    font-family: 'Playfair Display',serif
+    font-size: 14px
+    font-weight: 400
+    margin-top: 42px
+    margin-bottom: 52px
+    max-width: 830px
+  h2
+    font-family: Roboto,sans-serif
+    font-size: 14pt
+    font-weight: bolder
+    color: $WhiteColor
+    margin: 0
+  h2+p
+    font-family: Roboto,sans-serif
+    font-size: 13pt
+    font-weight: lighter
+    color: $WhiteColor
+    opacity: .7
+    margin-bottom: 45px
+    margin-top: 6px
 
 //Section: Info
 
@@ -676,7 +750,7 @@ nav
           margin-right: 5px
           margin-bottom: 10px
           border: 1px solid $WhiteColor
-          border-radius: 25px
+          border-radius: 50%
           height: 38px
           width: 38px
           padding: 12px 12px
