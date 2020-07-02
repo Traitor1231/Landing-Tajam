@@ -2,8 +2,8 @@
 
 ## ONLINE APP 
 
-Heroku:https://nutnetgulp.herokuapp.com/  
-Responsinator:https://www.responsinator.com/?url=https%3A%2F%2Fnutnetgulp.herokuapp.com%2F
+Heroku:https://landing-tajam.herokuapp.com 
+Responsinator:https://www.responsinator.com/?url=https%3A%2F%2Flanding-tajam.herokuapp.com%2F
 
 
 ## Local installation
