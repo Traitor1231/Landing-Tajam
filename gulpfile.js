@@ -1,23 +1,13 @@
 const gulp = require('gulp');
-
 const concat = require('gulp-concat');
-
 const autoprefixer = require('gulp-autoprefixer');
-
 const cleanCSS = require('gulp-clean-css');
-
 const del = require('del');
-
 const browserSync = require('browser-sync').create();
-
 const sourcemaps = require('gulp-sourcemaps');
-
 const sass = require('gulp-sass');
-
 const imagemin = require('gulp-imagemin');
-
 const rename = require('gulp-rename');
-
 const jade = require('gulp-jade');
 
 const styleFiles = [
@@ -40,7 +30,7 @@ gulp.task('styles', () => {
         .pipe(sass())
         .pipe(concat('style.css'))
         .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
+            overrideBrowserslist:  ['last 2 versions'],
             cascade: false
         }))
         .pipe(cleanCSS({
@@ -55,13 +45,10 @@ gulp.task('styles', () => {
 });
 
 gulp.task('scripts', () => {
-
-
     return gulp.src(scriptFiles)
         .pipe(concat('main.js'))
         .pipe(gulp.dest('./build/js'))
-        .pipe(browserSync.stream());
-
+        .pipe(browserSync.stream())
 });
 
 gulp.task('del', () => {
