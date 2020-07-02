@@ -596,33 +596,36 @@ nav
   overflow: hidden
 
 .slick-dots
+  height: 75px
   display: flex
   justify-content: center
   align-items: center
   margin: 0
   li
+    margin: 0 6px
     button
+      border: 0
       font-size: 0
-      background: url(#) no-repeat
       width: 45px
       height: 45px
       border-radius: 50%
       cursor: pointer
       outline: none
+    button[aria-controls="slick-slide00"]
+      background: url(/img/1.png) no-repeat
+    button[aria-controls="slick-slide01"]
+      background: url(/img/2.png) no-repeat
+    button[aria-controls="slick-slide02"]
+      background: url(/img/3.png) no-repeat
+    button[aria-controls="slick-slide03"]
+      background: url(/img/4.png) no-repeat
+    button[aria-controls="slick-slide04"]
+      background: url(/img/5.png) no-repeat
 
 li.slick-active
+  margin: 0 20px
   button
-    height: 70px
-    width: 70px
-
-.slick-dots
-  display: flex
-  justify-content: center
-  li
-    margin-left: 10px
-  li:first-child
-    margin-left: 0
-
+    transform: scale(1.6667)
 
 .slider__item
   cursor: pointer
